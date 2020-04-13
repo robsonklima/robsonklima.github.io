@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Portal STN</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Bootstrap Switch -->
+  <script src="plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+  <!-- Toastr -->
+  <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <style>
+    .center { text-align: center; }
+    .center i { margin-right: 10px !important; }
+    .dropdown-menu .show { z-index: 99990; }
+    .fa-trash-alt { color: #FF5252; }
+    .fa-check-square { color: #4CAF50; }
+    .fa-check-square { font-size: 11pt; }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini sidebar-collapse text-sm">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light text-sm">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="usuario.html" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Robson Kerschner de Lima
+                </h3>
+                <p class="text-sm">Analista de Sistemas</p>
+                <p class="text-sm text-muted">Clique para editar...</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+
+          <div class="dropdown-divider"></div>
+          <a href="index.html" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Sair
+                </h3>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-2">
+    <!-- Brand Logo -->
+    <a href="default.html" class="brand-link text-sm">
+      <img src="dist/img/perto-logo.png"
+           alt="Perto Logo"
+           class="brand-image img-circle elevation-1"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">Portal STN</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column text-sm" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="default.html" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Início
+              </p>
+            </a>
+          </li>
+          <li class="nav-header">REGISTROS</li>
+          <li class="nav-item">
+            
+            <a href="calendario.html" class="nav-link">
+              <i class="nav-icon fas fa-calendar-minus"></i>
+              <p>
+                Calendário
+                <span class="badge badge-danger right">2</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            
+            <a href="atividades.html" class="nav-link">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Atividades
+                <span class="badge badge-info right">6</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            
+            <a href="arquivos-ftp.html" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                Arquivos FTP
+              </p>
+            </a>
+          </li>
+          <li class="nav-header">FINANCEIRO</li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-money-check-alt"></i>
+              <p>
+                Despesas
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="despesas-grupo.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Grupos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tipos</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-header">RELATÓRIOS</li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar"></i>
+              <p>
+                Gerencial
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Equipe</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Usuário</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Minhas Atividades
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Despesas</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="default.html">Home</a></li>
+              <li class="breadcrumb-item active">Despesas</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title" style="line-height: 20px; padding-top: 6px;">Grupos de Despesas do Usuário</h3>
+
+              <div class="btn-group" style="float: right;">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">Novo</button>
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="tab" class="table table-bordered table-striped display compact">
+                <thead>
+                <tr>
+                  <th>Detalhes</th>
+                  <th>Data</th>
+                  <th>Total</th>
+                  <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Viagem para a Feira de Tecnologia de São Paulo</td>
+                  <td>16/03/2020</td>
+                  <td>R$ 245,89</td>
+                  <td class="center">
+                    <a href="despesas.html"><i class="fas fa-search"></i></a>
+                    <a href="#"><i class="fas fa-edit"></i></a>
+                    <a href="#"><i class="fas fa-check-square"></i></a>
+                    <a href="#"><i class="fas fa-trash-alt"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Treinamento dos Técnicos sobre Manual do Dispensador da Versão 4.5.10</td>
+                  
+                  <td>04/04/2020</td>
+                  <td>R$ 145,90</td>
+                  <td class="center">
+                    <a href="despesas.html"><i class="fas fa-search"></i></a>
+                    <a href="#"><i class="fas fa-edit"></i></a>
+                    <a href="#"><i class="fas fa-check-square"></i></a>
+                    <a href="#"><i class="fas fa-trash-alt"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Despesas Semanais</td>
+                  
+                  <td>06/04/2020</td>
+                  <td>R$ 512,99</td>
+                  <td class="center">
+                    <a href="despesas.html"><i class="fas fa-search"></i></a>
+                    <a href="#"><i class="fas fa-edit"></i></a>
+                    <a href="#"><i class="fas fa-check-square"></i></a>
+                    <a href="#"><i class="fas fa-trash-alt"></i></a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+    <div class="modal fade" id="modal-default">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Novo Grupo de Despesas</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Descrição</label>
+
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Digite a descrição do grupo">
+              </div>
+            </div> 
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success toastrDefaultSuccess" data-dismiss="modal">Salvar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer text-sm">
+    <div class="float-right d-none d-sm-block">
+      Versão 1.0.0
+    </div>
+    Perto &copy; 2020 - <a href="">Portal STN</a>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- InputMask -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+<!-- Toastr -->
+<script src="plugins/toastr/toastr.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    var table = $("#tab").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+      "language": {
+        "sEmptyTable": "Nenhum registro encontrado",
+        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+        "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sInfoThousands": ".",
+        "sLengthMenu": "_MENU_ &nbsp; resultados por página",
+        "sLoadingRecords": "Carregando...",
+        "sProcessing": "Processando...",
+        "sZeroRecords": "Nenhum registro encontrado",
+        "sSearch": "Pesquisar",
+        "oPaginate": {
+            "sNext": "Próximo",
+            "sPrevious": "Anterior",
+            "sFirst": "Primeiro",
+            "sLast": "Último"
+        },
+        "oAria": {
+            "sSortAscending": ": Ordenar colunas de forma ascendente",
+            "sSortDescending": ": Ordenar colunas de forma descendente"
+        },
+        "select": {
+            "rows": {
+                "_": "Selecionado %d linhas",
+                "0": "Nenhuma linha selecionada",
+                "1": "Selecionado 1 linha"
+            }
+        }   
+      }
+    });
+  });
+
+  //toastr
+  $('.toastrDefaultSuccess').click(function() {
+    toastr.success('Grupo de despesas registrado com sucesso!')
+  });
+</script>
+</body>
+</html>
